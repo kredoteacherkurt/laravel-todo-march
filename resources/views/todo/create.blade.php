@@ -16,5 +16,18 @@
             </div>
         </div>
     </form>
+    <ul class="mt-5 list-group">
+        @forelse ($all_tasks as $task)
+            <li class="list-group-item">
+                {{$task->name}}
+            </li>
+        @empty
+            <div class="alert alert-info">
+              <i class="fa-regular fa-exclamation"></i>  No tasks created yet
+            </div>
+        @endforelse
+    </ul>
+
+
 @endsection
 
